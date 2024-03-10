@@ -399,6 +399,11 @@ top_panel = homophily_df
 top_panel$group = as.character(homophily_df$group)
 top_panel = top_panel %>% mutate(group = replace(group, group == 'experts', 'Critcs'))
 top_panel = top_panel %>% mutate(group = replace(group, group == 'amateurs', 'Amateurs'))
+top_panel = top_panel %>% mutate(method = replace(method, method == 'Potential influence', 'Recommender potential'))
+top_panel = top_panel %>% mutate(method = replace(method, method == 'Real influence', 'Recommender influence'))
+top_panel$method = factor(top_panel$method, levels=c('Recommender potential', 'Recommender influence'))
+
+
 counts = rep(c(NUM_EXPERTS, NUM_AMATEURS), nrow(top_panel)/2)
 
 fig_11_12 = ggplot(top_panel, aes(x=kval, y=proportion_per_capita)) +  

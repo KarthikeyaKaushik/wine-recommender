@@ -35,7 +35,7 @@ if __name__ == '__main__':
             if STRATEGY == 'naive_knn':
                 performance, adjacency = single_wine_rep(dataframe, wine_ID)                            
                 all_adjacency[0] = combine_adj(current_adj=adjacency[0], master_adj=all_adjacency[0])
-        np.savetxt(os.path.join(storage_path, 'adjacencies_' + str(wine_ID) + '.csv'),                         all_adjacency[0])
+        np.savetxt(os.path.join(storage_path, 'adjacencies_' + str(wine_ID) + '.csv'), all_adjacency[0])
     
 #array([  0,   1,   2,   3,   7,   9,  12,  25,  27,  45,  50,  79,  82,
 #        93,  95,  96, 129, 133]),)

@@ -59,12 +59,6 @@ if __name__ == '__main__':
             np.savetxt(os.path.join(storage_path, GROUP, 'adjacencies', str(param) + '.csv'), 
                       all_adjacency[param])
 
-    
-# temp = np.nanmean(performance, axis=0)
-# t_k = [temp[i*7 : (i*7 + 7)] for i in range(17)]
-# t_k = [np.around(t, 3) for t in t_k]
-# t_k = [np.argmax(t) for t in t_k]
-
 
 
 
