@@ -746,3 +746,17 @@ heatmap_1 = ggplot(both_error, aes(x=factor(k, levels=k_levels),
   scale_fill_viridis()
 heatmap_1
 
+
+#### Linear model ####
+stats_df = read.table(file.path('results','stats.csv'),
+                      header=TRUE,sep=',')
+
+both_error = read.table(file.path('results','simulations',
+                                  'both','performance.csv'),header=FALSE,sep=' ')
+
+stats_df$k_5_both = both_error[,26]
+linear_model = lm(formula = k_5_both ~ ratings + mean_corr, data = stats_df)
+summary(linear_model)
+
+
+

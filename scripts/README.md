@@ -62,7 +62,7 @@ matches the average number of amateur ratings.
 
 ## viz.R :
 
-Visualization scripts in R, it operates on top of data produced by run.py, homophily.py and stats.py
+Visualization scripts in R, it operates on top of data produced by run.py, homophily.py and stats.py.
 
 ## network_viz.py
 
